@@ -15,7 +15,16 @@ function DeleteFromEmployeeByKey(employee,key){
     delete newObj[key];
     return newObj;
 }
-function destructivelyDeleteFromEmployeeByKey(employee,key){
-    delete employee[key];
-    return employee;
+// function destructivelyDeleteFromEmployeeByKey(employee,key){
+//     delete employee[key];
+//     return employee;
+// }
+function destructivelyDeleteFromEmployeeByKey(employee, key) {
+    let newEmployee = employee;
+    delete newEmployee.name;
+    delete newEmployee.streetAddress;
+
+    return employee
+    
 }
+destructivelyDeleteFromEmployeeByKey(employee, 'name')
